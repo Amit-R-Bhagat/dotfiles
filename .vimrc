@@ -153,7 +153,7 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+" nnoremap <C-f> :NERDTreeFind<CR>
 
 " makrdown preview
 let vim_markdown_preview_github=1
@@ -181,6 +181,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " ALE settings
 " let g:ale_set_balloons=1
 let g:ale_lint_on_text_changed = 'always'
+"let g:ale_kotlin_kotlinc_sourcepath = "*.kt"
 " Enable completion where available.
 " This setting must be set before ALE is loaded.
 

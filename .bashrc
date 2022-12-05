@@ -132,14 +132,25 @@ cf(){
 alias cf='cf'
 
 # run kotlin file
-kr(){
-    filename=${1%.*}
-    kotlinc ${filename}.kt -include-runtime -d ${filename}.jar
-    shift 1
-    java -jar ${filename}.jar $@
- }
+# kr(){
+#     filename=${1%.*}
+#     kotlinc *.kt -include-runtime -d ${filename}.jar
+#     shift 1
+#     java -jar ${filename}.jar $@
+#  }
+# 
+# kra(){
+#     filename=${1%.*}
+#     kotlinc $1 -include-runtime -d ${filename}.jar
+#     shift 1
+#     java -jar ${filename}.jar $@
+#  }
+# 
+#  alias mgit="java -jar ~/Desktop/mgit/mgit.jar"
 
- alias mgit="java -jar ~/Desktop/mgit/mgit.jar"
+# run mgit
+alias mgit='java -jar /home/amit/IdeaProjects/mgit/out/artifacts/mgit_jar/mgit.jar'
+
 
 
 # start dsa tmux session that was last saved.
@@ -151,3 +162,19 @@ alias mylog='vim ~/Documents/mylog.md'
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/amit/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/amit/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/amit/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/amit/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
